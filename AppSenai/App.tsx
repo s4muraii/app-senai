@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   header:{
     width: '100%',
-    backgroundColor: 'red',
+    backgroundColor: 'black',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
