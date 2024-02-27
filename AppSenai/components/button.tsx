@@ -1,31 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import React,{ useState } from 'react';
+import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-export const Button = () => {
-    return(
-        <View>
-            <TouchableOpacity style={styles.botãoacessar}>
-                <Text style={styles.textbotao}>Acessar</Text>
-            </TouchableOpacity>
-            <StatusBar style="auto" />
-        </View>
+const Botao= ({text, color}) => {
+    const styles = StyleSheet.create({
+        botao: {
+            alignItems: 'center',
+            backgroundColor: color,
+            padding: 10,
+            margin: 10,
+            borderRadius: 10,
+        },
+        textbotao: {
+            color: 'white',
+            fontSize: 20,
+        },
+    });
+    return (
+       <TouchableOpacity style={styles.botao}>
+        <Text style={styles.textbotao}>{text}</Text>
+      </TouchableOpacity>
     );
-};
+}
 
-const styles = StyleSheet.create({
-    botãoacessar: {
-        padding: 10,
-    },
-
-    textbotao: {
-        fontSize: 20,
-        color: 'white',
-        backgroundColor: 'black',
-        textAlign: 'center',
-        padding: 10,
-        width: 335,
-    },
-});
-
-export default Button;
+export default Botao;

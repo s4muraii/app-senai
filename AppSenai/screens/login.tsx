@@ -1,120 +1,52 @@
-// Autor: Vinicius de Oliveira Moura
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import React,{ useState } from 'react';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
+import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity , Linking, StatusBar } from "react-native";
+import Logo from "../components/logo";
+import InputField from "../components/input";
+import Botao from "../components/button";
+
+function login() {
+    return (
+        <View>
+            <View>
+                <Logo text="Login" color="black" />
+            </View>
+            <View>
+                <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
+
+                <InputField label="Email:" placeholder="Digite Email" value={value} setValue={setValue} />
+                <InputField label="Senha:" placeholder="Digite sua Senha" value={value} setValue={setValue} />
+                <Botao text="Entrar" color="black" />
+            </View>
+            <View style={styles.links}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
+                    <Text style={styles.link}>Cadastre-Se</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
+                    <Text style={styles.link}>Esqueceu sua senha?</Text>
+                </TouchableOpacity>
+                </View>
+            <StatusBar />
+        </View>
+    );
+}
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-    },
-    header:{
-        width: '100%',
-        backgroundColor: 'black',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
+    text : {
         fontSize: 20,
-        color: 'white',
-        padding: 15,
-    },
-    logo:{
-        width:200,
-        height:50,
-        marginTop: 42,
-    },
-    input: {
-        height: 40,
-        width: '80%',
-        margin: 12,
-        padding: 10,
-        borderBottomWidth: 1,
-    },
-    textemail: {
-        fontSize: 14,
+        fontWeight: '500',
         color: 'black',
-        marginRight: 280,
-        marginTop: 50,
-    },
-    textsenha: {
-        fontSize: 14,
-        color: 'black',
-        marginRight: 280,
-        marginTop: 20,
-    },
-    botãoacessar: {
-        padding: 10,
-    },
-    textbotao: {
-        fontSize: 20,
-        color: 'white',
-        backgroundColor: 'black',
+        alignContent: 'center',
         textAlign: 'center',
-        padding: 10,
-        width: 335,
-    },
+        marginBottom: 20,
+    }, 
     link: {
-        color: 'blue',
-        textDecorationLine: 'underline',
-        marginRight: 95,
-        marginTop: 20,
-    },
-    icons: {
-        marginTop: 50,
-        gap: 10,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+    fontSize: 14,
+    color: 'blue',
+  },
+  links: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 20,
+  },
 });
-
-const Header = () => {
-    return (
-        <View style={styles.header}>
-            <Image source={require('./img/logo.png')} style={styles.logo} />
-            <Text style={styles.header}>Bem-Vindo(a)</Text>
-        </View>
-    );
-}
-
-export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    return (
-        <View style={styles.container}>
-            <Header />
-            <Text style={styles.textemail}>Email: </Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={setEmail}
-                value={email}
-                placeholder="Digite seu e-mail"
-            />
-            <Text style={styles.textsenha}>Senha: </Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={setPassword}
-                value={password}
-                placeholder="Digite sua senha"
-                secureTextEntry
-            />
-            <TouchableOpacity style={styles.botãoacessar}>
-                <Text style={styles.textbotao}>Acessar</Text>
-            </TouchableOpacity>
-            <StatusBar style="auto" />
-            <Text style={styles.link}>
-                Não possui uma conta? Cadastre-se!
-            </Text>
-            <View style={styles.icons}>
-                <AntDesign name="google" size={30} color="black" />
-                <FontAwesome5 name="facebook" size={30} color="black" />
-            </View>
-            <StatusBar style="auto" />
-        </View>
-    );
-}
+export default login;

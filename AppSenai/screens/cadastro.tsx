@@ -1,59 +1,32 @@
-import React from 'react';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking } from 'react-native';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import React,{ useState } from 'react';
+import Logo from '../components/logo';
 import InputField from '../components/input';
-import Button from '../components/button';
+import Botao from '../components/button';
 
-const Header = () => {
-        return (
-            <View style={styles.header}>
-                <Image source={require('./img/logo.png')} style={styles.logo} />
-                <Text style={styles.header}>Recuperação de Senha</Text>
-            </View>
-        );
-}
+function cadastro () {
+  return (
+    <View>
 
-export default function Cadastro() {
-    return (
-        <View style={styles.container}>
-            <Header />
-            <View style={styles.titulo}>
-                <Text>
-                    Insira seu e-mail para recuperar a senha
-                </Text>
-                <InputField />
-                <Button />
-            </View>
+        <View>
+            <Logo text="Cadastre-se" color="red" />
         </View>
-    );
+        <View>
+            <InputField label="Nome" placeholder="Digite seu nome" />
+            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" />
+            <InputField label="Email" placeholder="Digite seu Email" />
+            <InputField label="Telefone" placeholder="Digite seu Telefone" />
+            <InputField label="Senha" placeholder="Digite sua Senha" />
+            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" />
+            <Botao text="Cadastrar" color="black" />
+
+        </View>
+        <StatusBar style="auto" />
+    </View>
+  );
 }
 
-
-  const styles = StyleSheet.create({
-    logo:{
-        width:200,
-        height:50,
-        marginTop: 42,
-      },
-
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-    },
-
-    header: {
-        width: '100%',
-        backgroundColor: 'blue',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        fontSize: 20,
-        color: 'white',
-        padding: 15,
-    },
-
-    titulo: {
-        marginTop: 20,
-    },
-  });
+export default cadastro;

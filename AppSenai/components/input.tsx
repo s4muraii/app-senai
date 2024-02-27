@@ -1,37 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TextInput, Text, View, StyleSheet } from 'react-native';
 
-export const InputField = () => {
-
-        const [email, setEmail] = useState('');
-
-        return (
-            <View>
-                <Text style={styles.textemail}>Email: </Text>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={setEmail}
-                    value={email}
-                    placeholder="Digite seu e-mail"
-                />
-            </View>
-        );
+const InputField = ({ label, value, setValue, placeholder }) => {
+  return (
+    <View>
+      <Text style={styles.text}>{label}</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={setValue}
+        value={value}
+        placeholder={placeholder}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-        input: {
-                height: 40,
-                width: '80%',
-                margin: 12,
-                padding: 10,
-                borderBottomWidth: 1,
-        },
-        textemail: {
-                fontSize: 14,
-                color: 'black',
-                marginRight: 280,
-                marginTop: 50,
-        }
+  input: {
+    height: 40,
+    width: '95%',
+    margin: 12,
+    padding: 10,
+    borderWidth: 0,
+    borderColor: 'black',
+    backgroundColor: '#f5f5f5',
+    borderRadius: 10,
+
+  },
+  text: {
+    fontSize: 14,
+    color: 'black',
+    marginTop: 10,
+    marginLeft: 25,
+  },
 });
 
 export default InputField;
