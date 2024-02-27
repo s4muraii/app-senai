@@ -6,7 +6,7 @@ import Button from '../components/button';
 const Header = () => {
         return (
             <View style={styles.header}>
-                <Image source={require('./img/Logo.png')} style={styles.logo} />
+                <Image source={require('./img/logo.png')} style={styles.logo} />
                 <Text style={styles.header}>Recuperação de Senha</Text>
             </View>
         );
