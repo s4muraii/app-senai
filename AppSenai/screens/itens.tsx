@@ -6,7 +6,7 @@ import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/v
 const itens = () => {
     return (
         <View>
-        <Itens id="956389" />
+        <Itens text="956389" color="red" />
             <View style={styles.addButtonContainer}>
                 <AntDesign name="pluscircle" size={50} color="red" />
             </View>

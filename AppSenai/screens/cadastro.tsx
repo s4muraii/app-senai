@@ -15,13 +15,13 @@ function cadastro () {
             <Logo text="Cadastre-se" color="red" />
         </View>
         <View>
-            <InputField label="Nome" placeholder="Digite seu nome" />
-            <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" />
-            <InputField label="Email" placeholder="Digite seu Email" />
-            <InputField label="Telefone" placeholder="Digite seu Telefone" />
-            <InputField label="Senha" placeholder="Digite sua Senha" />
-            <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" />
-            <Botao text="Cadastrar" color="black" />
+          <InputField label="Nome" placeholder="Digite seu nome" value={""} setValue={() => {}} />
+          <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" value={""} setValue={() => {}} />
+          <InputField label="Email" placeholder="Digite seu Email" value={""} setValue={() => {}} />
+          <InputField label="Telefone" placeholder="Digite seu Telefone" value={""} setValue={() => {}} />
+          <InputField label="Senha" placeholder="Digite sua Senha" value={""} setValue={() => {}} />
+          <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" value={""} setValue={() => {}} />
+          <Botao text="Cadastrar" color="black" />
 
         </View>
         <StatusBar style="auto" />

@@ -3,13 +3,6 @@ import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
 import { Text, View, StyleSheet } from "react-native";
-import InputField from "../components/input";
-import Botao from "../components/button";
-import React from "react";
-import { Text, View } from "react-native";
-import Logo from "../components/logo";
-import InputField from "../components/input";
-import Botao from "../components/button";
 
 function Recuperar(){
     return(

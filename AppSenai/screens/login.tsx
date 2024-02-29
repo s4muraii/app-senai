@@ -5,6 +5,8 @@ import InputField from "../components/input";
 import Botao from "../components/button";
 
 function login() {
+    const [value, setValue] = React.useState(""); // Declare 'value' and 'setValue' variables
+
     return (
         <View>
             <View>
@@ -13,7 +15,7 @@ function login() {
             <View>
                 <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-                <InputField label="Email:" placeholder="Digite Email" value={value} setValue={setValue} />
+                <InputField label="Email:" placeholder="Digite Email" value={setValue} setValue={setValue} />
                 <InputField label="Senha:" placeholder="Digite sua Senha" value={value} setValue={setValue} />
                 <Botao text="Entrar" color="black" />
             </View>
