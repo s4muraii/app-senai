@@ -7,7 +7,7 @@ import Logo from '../components/logo';
 import InputField from '../components/input';
 import Botao from '../components/button';
 
-function cadastro () {
+function Cadastro () {
   return (
     <View>
 
@@ -29,4 +29,4 @@ function cadastro () {
   );
 }
 
-export default cadastro;
+export default Cadastro;

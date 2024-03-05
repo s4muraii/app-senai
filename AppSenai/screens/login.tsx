@@ -4,7 +4,7 @@ import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
 
-function login() {
+function Login() {
     const [value, setValue] = React.useState(""); // Declare 'value' and 'setValue' variables
 
     return (
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
     margin: 20,
   },
 });
-export default login;
+export default Login;

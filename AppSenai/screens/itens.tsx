@@ -1,12 +1,12 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
-import Itens from "../components/item";
+import Logo from "../components/item";
 import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
 
-const itens = () => {
+const Itens = () => {
     return (
         <View>
-        <Itens text="956389" color="red" />
+        <Logo text="956389" color="red" />
             <View style={styles.addButtonContainer}>
                 <AntDesign name="pluscircle" size={50} color="red" />
             </View>
@@ -54,4 +54,4 @@ addButtonContainer: {
 },
 });
 
-export default itens;
+export default Itens;

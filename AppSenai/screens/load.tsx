@@ -18,7 +18,7 @@ const Load = () => {
 
     return (
         <View style={styles.Load}>
-            <Image source={require('../components/senai.png')} style={styles.Logo} />
+            <Image source={require('./components/img/logo.png')} style={styles.Logo} />
             <FontAwesome6 name="circle-notch" size={60} color="white" style={{ marginTop: 80 }} />
         </View>
     );
