@@ -1,32 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import React,{ useState } from 'react';
+import React from 'react';
+import { View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Logo from '../components/logo';
 import InputField from '../components/input';
 import Botao from '../components/button';
 
-function Cadastro () {
+export default function Cadastro() {
   return (
-    <View>
-
-        <View>
-            <Logo text="Cadastre-se" color="red" />
-        </View>
-        <View>
-          <InputField label="Nome" placeholder="Digite seu nome" value={""} setValue={() => {}} />
-          <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" value={""} setValue={() => {}} />
-          <InputField label="Email" placeholder="Digite seu Email" value={""} setValue={() => {}} />
-          <InputField label="Telefone" placeholder="Digite seu Telefone" value={""} setValue={() => {}} />
-          <InputField label="Senha" placeholder="Digite sua Senha" value={""} setValue={() => {}} />
-          <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" value={""} setValue={() => {}} />
-          <Botao text="Cadastrar" color="black" />
-
-        </View>
-        <StatusBar style="auto" />
-    </View>
+    <KeyboardAwareScrollView
+      resetScrollToCoords={{ x: 0, y: 0 }}
+      contentContainerStyle={{ flexGrow: 1 }}
+      scrollEnabled={false}
+    >
+      <View>
+        <Logo text="Cadastre-se" color="red" />
+        <InputField label="Nome" placeholder="Digite seu nome" secureTextEntry={false} />
+        <InputField label="Sobrenome" placeholder="Digite seu Sobrenome" secureTextEntry={false} />
+        <InputField label="Email" placeholder="Digite seu Email" secureTextEntry={false} />
+        <InputField label="Telefone" placeholder="Digite seu Telefone" secureTextEntry={false} />
+        <InputField label="Senha" placeholder="Digite sua Senha" secureTextEntry={true} />
+        <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" secureTextEntry={true}/>
+        <Botao text="Cadastrar" color="black" />
+      </View>
+    </KeyboardAwareScrollView>
   );
 }
-
-export default Cadastro;

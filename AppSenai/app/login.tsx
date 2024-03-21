@@ -1,35 +1,32 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity , Linking, StatusBar } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar  } from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
 
-function Login() {
-    const [value, setValue] = React.useState(""); // Declare 'value' and 'setValue' variables
+function login() {
+  return (
+    <View>
+      <View>
+        <Logo text="Login" color="black" />
+      </View>
+      <View>
+        <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-    return (
-        <View>
-            <View>
-                <Logo text="Login" color="black" />
-            </View>
-            <View>
-                <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
-
-                <InputField label="Email:" placeholder="Digite Email" value={setValue} setValue={setValue} />
-                <InputField label="Senha:" placeholder="Digite sua Senha" value={value} setValue={setValue} />
-                <Botao text="Entrar" color="black" />
-            </View>
-            <View style={styles.links}>
-                <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
-                    <Text style={styles.link}>Cadastre-Se</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
-                    <Text style={styles.link}>Esqueceu sua senha?</Text>
-                </TouchableOpacity>
-                </View>
-            <StatusBar />
+        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
+        <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
+        <Botao text="Entrar" color="black" />
+      </View>
+      <View style={styles.links}>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
+          <Text style={styles.link}>Cadastre-Se</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
+          <Text style={styles.link}>Esqueceu sua senha?</Text>
+        </TouchableOpacity>
         </View>
-    );
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -51,4 +48,4 @@ const styles = StyleSheet.create({
     margin: 20,
   },
 });
-export default Login;
+export default login;
