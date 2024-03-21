@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, View, StyleSheet } from "react-native";
-import { FontAwesome6 } from '@expo/vector-icons';
+import { FontAwesome6 } from '@expo/vector-icons'; // Add the import statement for FontAwesome6
 
 const Load = () => {
     const styles = StyleSheet.create({
@@ -18,7 +18,7 @@ const Load = () => {
 
     return (
         <View style={styles.Load}>
-            <Image source={require('./components/img/logo.png')} style={styles.Logo} />
+            <Image source={require('./components/img/Logo.png')} style={styles.Logo} />
             <FontAwesome6 name="circle-notch" size={60} color="white" style={{ marginTop: 80 }} />
         </View>
     );
