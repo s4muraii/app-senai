@@ -3,6 +3,7 @@ import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Itens from "../components/item";
 import { AntDesign, Entypo, Foundation } from '@expo/vector-icons';
 import Bottom from "../components/bottom";
+import { Link } from "expo-router";
 
 const itens = () => {
     return (
