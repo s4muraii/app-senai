@@ -4,6 +4,8 @@ import Header from "../components/header";
 import InventoryInput from "../components/invinput";
 import Bottom from "../components/bottom";
 import { AntDesign } from '@expo/vector-icons';
+
+
 export default function AddItens() {
         const styles = StyleSheet.create({
     paddingtop: {

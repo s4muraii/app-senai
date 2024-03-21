@@ -13,7 +13,6 @@ function login() {
       </View>
       <View>
         <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
-
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="/itens" asChild>
