@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, S
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
+import { Link } from "expo-router";
 
 function login() {
   return (
@@ -15,14 +16,16 @@ function login() {
 
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
-        <Botao text="Entrar" color="black" />
+        <Botao text="Entrar" color="black" />"
       </View>
       <View style={styles.links}>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
           <Text style={styles.link}>Cadastre-Se</Text>
+          <Link href="./cadastro.tsx"  asChild/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
           <Text style={styles.link}>Esqueceu sua senha?</Text>
+        <Link href="./rec.tsx"  asChild/>
         </TouchableOpacity>
         </View>
     </View>
