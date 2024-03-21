@@ -1,27 +1,52 @@
 import React from "react";
-import { Image, View, StyleSheet } from "react-native";
-import { FontAwesome6 } from '@expo/vector-icons'; // Add the import statement for FontAwesome6
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar  } from "react-native";
+import Logo from "../components/logo";
+import InputField from "../components/input";
+import Botao from "../components/button";
+import { Link } from "expo-router";
 
-const Load = () => {
-    const styles = StyleSheet.create({
-        Load: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#FF0000',
-        },
-        Logo: {
-            width: 181,
-            height: 39,
-        },
-    });
+function login() {
+  return (
+    <View>
+      <View>
+        <Logo text="Login" color="black" />
+      </View>
+      <View>
+        <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-    return (
-        <View style={styles.Load}>
-            <Image source={require('./components/img/Logo.png')} style={styles.Logo} />
-            <FontAwesome6 name="circle-notch" size={60} color="white" style={{ marginTop: 80 }} />
+        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
+        <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
+        <Botao text="Entrar" color="black" />
+      </View>
+      <View style={styles.links}>
+          <Link href="/cadastro" asChild>
+          <Text style={styles.link}>Cadastre-Se</Text>
+          </Link>
+          <Link href="/rec" asChild>
+          <Text style={styles.link}>Esqueceu sua senha?</Text>
+          </Link>
         </View>
-    );
+    </View>
+  );
 }
 
-export default Load;
+const styles = StyleSheet.create({
+    text : {
+        fontSize: 20,
+        fontWeight: '500',
+        color: 'black',
+        alignContent: 'center',
+        textAlign: 'center',
+        marginBottom: 20,
+    }, 
+    link: {
+    fontSize: 14,
+    color: 'blue',
+  },
+  links: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 20,
+  },
+});
+export default login;
