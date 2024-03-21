@@ -16,14 +16,16 @@ function login() {
 
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
-        <Botao text="Entrar" color="black" />
+        <Link href="/itens" asChild>
+          <Botao text="Entrar" color="black" />
+        </Link>
       </View>
       <View style={styles.links}>
           <Link href="/cadastro" asChild>
-          <Text style={styles.link}>Cadastre-Se</Text>
+            <Text style={styles.link}>Cadastre-Se</Text>
           </Link>
           <Link href="/rec" asChild>
-          <Text style={styles.link}>Esqueceu sua senha?</Text>
+            <Text style={styles.link}>Esqueceu sua senha?</Text>
           </Link>
         </View>
     </View>
