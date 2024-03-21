@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar  } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
