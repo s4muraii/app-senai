@@ -1,10 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Touchable, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Logo from '../components/logo';
 import InputField from '../components/input';
 import Botao from '../components/button';
 import { Link } from 'expo-router';
+import { TouchableOpacity } from 'react-native';
 
 export default function Cadastro() {
   return (
@@ -21,8 +22,10 @@ export default function Cadastro() {
         <InputField label="Telefone" placeholder="Digite seu Telefone" secureTextEntry={false} />
         <InputField label="Senha" placeholder="Digite sua Senha" secureTextEntry={true} />
         <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" secureTextEntry={true}/>
-        <Link href="/login" asChild>
-          <Botao text="Cadastrar" color="black" />
+        <Link href="/index" asChild>
+          <TouchableOpacity>
+            <Botao text="Cadastrar" color="black" />
+          </TouchableOpacity>
         </Link>
       </View>
     </KeyboardAwareScrollView>

@@ -16,26 +16,24 @@ const itens = () => {
                 </TouchableOpacity>
             </View>
             <View>
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
-                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/editar" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
             </View>
         </ScrollView>
             <View style={styles.addButtonContainer}>
-                <AntDesign name="pluscircle" size={50} color="red" />
+                <Link href="/additens" >
+                    <AntDesign name="pluscircle" size={50} color="red" />
+                </Link>
             </View>
             <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} position="absolute" />
         </View>

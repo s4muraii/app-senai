@@ -6,8 +6,6 @@ import Bottom from "../components/bottom";
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-
 export default function InfoItens() {
     const styles = StyleSheet.create({
         paddingtop: {
