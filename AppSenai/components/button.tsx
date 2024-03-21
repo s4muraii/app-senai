@@ -4,6 +4,7 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 type BotaoProps = {
     text: string,
     color: string,
+    href?: string,
 }
 
 const Botao= ({text, color}: BotaoProps) => {
