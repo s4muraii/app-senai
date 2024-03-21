@@ -4,6 +4,8 @@ import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
 import { Link } from "expo-router";
+import { TouchableOpacity } from "react-native";
+
 
 function login() {
   return (
@@ -11,12 +13,15 @@ function login() {
       <View>
         <Logo text="Login" color="black" />
       </View>
+
       <View>
         <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="/itens" asChild>
-          <Botao text="Entrar" color="black" />
+          <TouchableOpacity>
+            <Botao text="Entrar" color="black" />
+          </TouchableOpacity>
         </Link>
       </View>
       <View style={styles.links}>

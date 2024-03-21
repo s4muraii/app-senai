@@ -1,19 +1,42 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
-import Logo from "../components/item";
-import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
+import Itens from "../components/item";
+import { AntDesign, Entypo, Foundation } from '@expo/vector-icons';
+import Bottom from "../components/bottom";
 
-const Itens = () => {
+const itens = () => {
     return (
         <View>
-        <Logo text="956389" color="red" />
+        <ScrollView>
+            <View style={styles.displaytop}>
+                <Foundation name="list" size={24} color="#595959" />
+                <TouchableOpacity>
+                    <Entypo name="magnifying-glass" size={24} color="#595959" />
+                </TouchableOpacity>
+            </View>
+            <View>
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+                <Itens id="956389" item="CADEIRA  SENAI" /> {/* Add the id prop */}
+            </View>
+        </ScrollView>
             <View style={styles.addButtonContainer}>
                 <AntDesign name="pluscircle" size={50} color="red" />
             </View>
-            <View style={styles.display}>
-                <FontAwesome5 name="list-ol" size={24} color="#ffffff" />
-                <FontAwesome6 name="camera-rotate" size={24} color="#ffffff" />
-            </View>
+            <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} position="absolute" />
         </View>
     );
 };
@@ -54,4 +77,4 @@ addButtonContainer: {
 },
 });
 
-export default Itens;
+export default itens;

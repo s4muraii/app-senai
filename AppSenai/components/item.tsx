@@ -1,39 +1,42 @@
 import React from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
 
-const Logo = ({text, color}) => {
-    const styles = StyleSheet.create({
-        header: {
-            marginBottom: 20,
-            gap: 20,
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: color,
-            borderBottomWidth: 1,
-            borderBottomColor: '#000',
-            padding: 50,
-            borderBottomLeftRadius: 5,
-            borderBottomRightRadius: 5,
-        },
-        logo: {
-            marginTop: 20,
-            width: 181,
-            height: 39,
-        },
-        headerText: {
-            fontSize: 20,
-            fontWeight: 'bold',
-            color: 'white',
-        },
-    });
-
-    return (
-        <View style={styles.header}>
-            <Image source={require('./img/Logo.png')} style={styles.logo} />
-            <Text style={styles.headerText}>{text}</Text>
-        </View>
-    );
+type ItensProps = {
+id: string,
+item: string,
 }
 
-export default Logo;
+const Itens = ({id, item }: ItensProps) => {
+    return(
+        <View style={styles.display}>
+            <Text style={styles.text}>{id}</Text>
+            <Text style={styles.item}>{item}</Text>
+        </View>
+    );
+};
+
+export default Itens;
+
+const styles = StyleSheet.create({
+    display: {
+        borderBottomColor: '#f5f5f5',
+        borderBottomWidth: 2,
+    },
+    text : {
+        fontSize: 20,
+        fontWeight: '500',
+        color: 'black',
+        alignContent: 'center',
+        marginTop: 20,
+
+        marginLeft: 25,
+    },
+    item: {
+        fontSize: 15,
+        fontWeight: '500',
+        color: 'lightgray',
+        alignContent: 'center',
+        marginLeft: 25,
+        marginBottom: 20,
+    },
+});
