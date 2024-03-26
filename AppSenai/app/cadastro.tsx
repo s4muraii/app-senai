@@ -22,7 +22,7 @@ export default function Cadastro() {
         <InputField label="Telefone" placeholder="Digite seu Telefone" secureTextEntry={false} />
         <InputField label="Senha" placeholder="Digite sua Senha" secureTextEntry={true} />
         <InputField label="Confirme sua Senha" placeholder="Confirme sua Senha" secureTextEntry={true}/>
-        <Link href="/index" asChild>
+        <Link href="/qrcode" asChild>
           <TouchableOpacity>
             <Botao text="Cadastrar" color="black" />
           </TouchableOpacity>
