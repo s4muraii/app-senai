@@ -13,7 +13,6 @@ export default function AddItens() {
     return (
         <View>
 <View>
-    <Header text="Cadastro de itens" color="red" colortxt="white" icon1={<AntDesign name="arrowleft" size={24} color="white" />} icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/>
     <View style={styles.paddingtop}>
     <InventoryInput label='N inventario'/>
     <InventoryInput label='Descrição' />
@@ -21,7 +20,6 @@ export default function AddItens() {
     <InventoryInput label='Responsavel'/>
     <InventoryInput label='Data de registro'/>
     </View>
-    <Bottom color="ffff" coloricons= "#595959" bottom={0} position="fixed" />
     </View>
 </View>
     );
