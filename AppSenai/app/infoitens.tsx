@@ -3,8 +3,6 @@ import { View, StyleSheet } from "react-native";
 import Header from "../components/header";
 import ProdutoInfo from "../components/produtinfo";
 import Bottom from "../components/bottom";
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function InfoItens() {
     const styles = StyleSheet.create({
@@ -30,7 +28,7 @@ export default function InfoItens() {
     return(
         <View>
             <View>
-                <Header texto="Descrição do item" cor="red" icon1={<AntDesign name="arrowleft" size={24} color="white" />} icon2={<Ionicons name="reload-outline" size={24} color="white" />}/>
+                <Header cor="#ff0000" texto="Informações do Item" />
             </View>
             <View style={styles.paddingtop}>
                 <ProdutoInfo label='N inventario' info='956389'/>
