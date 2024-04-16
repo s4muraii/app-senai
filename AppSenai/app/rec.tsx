@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
-import { Image, Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
 function Recuperar(){
     return(
@@ -13,7 +13,7 @@ function Recuperar(){
     <Text style={styles.text}>Insira seu e-mail para recuperar a senha!</Text>
     <InputField  label="Email:" placeholder="Digite seu Email" secureTextEntry={false}/>
     
-    <Botao text="Recuperar" color="black" />
+    <Botao text="Recuperar" color="black" href="/rec.tsx" />
     </View>
 )}
 

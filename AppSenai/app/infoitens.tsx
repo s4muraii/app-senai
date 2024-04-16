@@ -30,7 +30,7 @@ export default function InfoItens() {
     return(
         <View>
             <View>
-                <Header text="Descrição do item" color="red" colortxt="white" icon1={<AntDesign name="arrowleft" size={24} color="white" />} icon2={<Ionicons name="reload-outline" size={24} color="white" />}/>
+                <Header texto="Descrição do item" cor="red" icon1={<AntDesign name="arrowleft" size={24} color="white" />} icon2={<Ionicons name="reload-outline" size={24} color="white" />}/>
             </View>
             <View style={styles.paddingtop}>
                 <ProdutoInfo label='N inventario' info='956389'/>

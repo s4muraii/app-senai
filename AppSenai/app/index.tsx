@@ -1,53 +1,67 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/button";
 import { Link } from "expo-router";
-import { TouchableOpacity } from "react-native";
-
+import useTheme from "../temas/temas";
 
 function login() {
+
+  const cores = useTheme();
+
   return (
     <View>
+    <View style={
+      {
+        backgroundColor: cores.bgPrimary,
+        height: '100%',
+      }
+    
+    }>
       <View>
-        <Logo text="Login" color="black" />
+        <Logo text="Login" color={cores.bgPrimary} />
       </View>
-
       <View>
-        <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
-        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
+        <Text style={styles.text}>Faça Login Para Acessar o Sistema!</Text>
+
+        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false} />
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
-        <Link href="/itens" asChild>
-          <TouchableOpacity>
-            <Botao text="Entrar" color="black" />
-          </TouchableOpacity>
+        <Link href="./drawer/home/index" asChild>
+          <Botao text="Entrar" color={cores.bgSecondary} href="./drawer/home/itens"/>
         </Link>
       </View>
-      <View style={styles.links}>
-          <Link href="/cadastro" asChild>
-            <Text style={styles.link}>Cadastre-Se</Text>
-          </Link>
-          <Link href="/rec" asChild>
-            <Text style={styles.link}>Esqueceu sua senha?</Text>
-          </Link>
+      <View>
+        <View style={styles.links}>
+        <Link href="/cadastro" asChild>
+          <TouchableOpacity>
+            <Text style={[styles.link, {color: cores.textColor}]}>Cadastre-Se</Text>
+          </TouchableOpacity>
+        </Link>
+        <Link href="/rec" asChild>
+          <TouchableOpacity>
+            <Text style={[styles.link, {color: cores.textColor}]}>Esqueceu sua senha?</Text>
+          </TouchableOpacity>
+        </Link>
         </View>
+      </View>
+    </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    text : {
-        fontSize: 20,
-        fontWeight: '500',
-        color: 'black',
-        alignContent: 'center',
-        textAlign: 'center',
-        marginBottom: 20,
-    }, 
-    link: {
+  text: {
+    fontSize: 20,
+    fontWeight: '500',
+    color: 'black',
+    alignContent: 'center',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  link: {
     fontSize: 14,
-    color: 'blue',
+    
   },
   links: {
     flexDirection: 'row',
@@ -55,4 +69,5 @@ const styles = StyleSheet.create({
     margin: 20,
   },
 });
+
 export default login;
