@@ -14,7 +14,7 @@ export default function AddItens() {
 <View>
     <Header cor="#ff0000" texto="Adicionar Itens" />
     <View style={styles.paddingtop}>
-    <InventoryInput label='N inventario'/>
+    <InventoryInput label='n inventario'/>
     <InventoryInput label='Descrição' />
     <InventoryInput label='Local'/>
     <InventoryInput label='Responsavel'/>
