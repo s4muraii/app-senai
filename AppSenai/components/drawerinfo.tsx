@@ -1,7 +1,7 @@
     import React from 'react';
     import { View, Text, StyleSheet} from 'react-native';
     import { MaterialIcons } from '@expo/vector-icons';
-    import useTheme from '../temas/Temas';
+    import useTheme from '../temas/temas';
 
     export default function DrawerInfo({ icon, Titulo, t1, t2}){
         const cores = useTheme();
