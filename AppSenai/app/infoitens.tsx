@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, StatusBar } from "react-native";
-import ProdutoInfo from "../components/produtoinfo";
+import ProdutoInfo from "../components/produtinfo";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import useTheme from "../temas/temas";
 import { Link } from "expo-router";
